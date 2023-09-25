@@ -101,11 +101,13 @@ At this point you should be able to build a blank API by pressing File-> Build S
 
 Now you are ready to build your first AR App. The first thing we will do is create a visualizer for planar surfaces detected by your device. Later you will use these planes as locations where you can place your game board. 
 
-First delete the main camera that is placed in the scene by default by unity. We will replace this by it’s AR Equivalent. This requires two objects: AR Session and AR Session Origin. At the bottom of your screen you should see a window labeled Project. In the search box type “ARSession” and drag both the ARSession and ARSessionOrigin objects into the scene hierarchy. 
+Create a new scene.
 
-In the newest version of AR Foundation these will instead be in GameObject (or '+' or Right Click in 'Hierarchy') -> XR -> ARSession/ ARSessionOrigin
+Delete the main camera that is placed in the scene by default by unity. We will replace this by it’s AR Equivalent. This requires two objects: AR Session and AR Session Origin. 
 
-Select AR Session Origin. In the inspection tab select Add Component and in the search box type “AR Plane Manager” and add it. You will notice that the plane prefab field is empty. We will fill this field by creating our own plane prefab. 
+In the newest version of AR Foundation these will be in GameObject (or '+' or Right Click in 'Hierarchy') -> XR -> ARSession / XR Origin
+
+Select XR Origin. In the inspection tab select Add Component and in the search box type “AR Plane Manager” and add it. **Make sure you select the UnityEngine.XR version!** You will notice that the plane prefab field is empty. We will fill this field by creating our own plane prefab. 
 
 In you scene hierarchy create an empty game object and name it “Plane Visualization Object”. Select this object. We are going to add several components to this: 
 AR Plane, AR Plane Mesh Visualizer, Mesh Renderer, Mesh Collider and Mesh Filter
