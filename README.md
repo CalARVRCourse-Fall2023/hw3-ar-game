@@ -10,7 +10,7 @@ Use the repository created when you accept the assignment on GitHub classrooms (
 
 ### Deadline
 
-HW3 is due Friday, 10/14/2022, 11:59PM. Both your code and video need to be turned in for your submission to be complete; HWs which are turned in after 11:59pm will use one of your slip days -- there are no slip minutes or slip hours.
+Please see bCourses for HW deadline. Videos and code should be uploaded before the deadline. Any homeworks submitted after the deadline will automatically use slip days as per the course guidelines.
 
 ### Academic honesty
 Please do not post code to a public GitHub repository, even after the class is finished, since these HWs will be reused both  in the future.
