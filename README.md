@@ -94,6 +94,8 @@ In Unity Hub create a new 3D Project.
       * Set Architecture to: ARM64
    * Add camera usage description. Something along the lines of "Uses camera to render room for AR game"
 
+If you are asked to update your project settings to support the new input system, select Yes.
+
 At this point you should be able to build a blank API by pressing File-> Build Settings -> Build
 
 
