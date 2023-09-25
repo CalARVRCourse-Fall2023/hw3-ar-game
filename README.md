@@ -26,6 +26,10 @@ We recommend using a screen recorder to record video of your game in action.
 For iOS you can use the built in screen recorder: https://support.apple.com/en-us/HT207935 
 For Android devices you will likely want to install a 3rd party screen recorder. AZ Screen Recorder works well and is easy to use: https://play.google.com/store/apps/details?id=com.hecorat.screenrecorder.free&hl=en_US 
 
+Please see this guide for proper video submissions:
+
+https://docs.google.com/document/d/1cEpDe3CDDrIXoO1ljZLEz-Bpvs9N-DbY89AtO_-Ku5Q/edit?usp=sharing
+
 ### 2. Code
 You will also need to push your project folder to this repo. 
 
