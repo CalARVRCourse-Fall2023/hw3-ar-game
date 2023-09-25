@@ -6,7 +6,8 @@ Note that just like in HW2, your game must have an end condition and indicate to
 
 ## Logistics
 
-Create and name a new private repo and name the repo as cs294-137-hw3-YourGitID
+Use the repository created when you accept the assignment on GitHub classrooms (this repo). The course staff will look at this repo to evaluate your code for this assignment, so please make sure you submit your code into this repository when you turn in your assignment.
+
 ### Deadline
 
 HW3 is due Friday, 10/14/2022, 11:59PM. Both your code and video need to be turned in for your submission to be complete; HWs which are turned in after 11:59pm will use one of your slip days -- there are no slip minutes or slip hours.
@@ -26,11 +27,7 @@ For iOS you can use the built in screen recorder: https://support.apple.com/en-u
 For Android devices you will likely want to install a 3rd party screen recorder. AZ Screen Recorder works well and is easy to use: https://play.google.com/store/apps/details?id=com.hecorat.screenrecorder.free&hl=en_US 
 
 ### 2. Code
-You will also need to push your project folder to your your private repo. 
-Add the following github IDs so that we can access these:
-
-bjo3rn 
-o0WeiyuFeng0o
+You will also need to push your project folder to this repo. 
 
 **Submit a link to your repo and your video on bCourses.** Do not modify your repo after the submission deadline.
 
