@@ -92,6 +92,7 @@ In Unity Hub create a new 3D Project.
       * Set target minimum iOS Version to: 11.0
       * Select: Requires ARKit support 
       * Set Architecture to: ARM64
+   * Add camera usage description. Something along the lines of "Uses camera to render room for AR game"
 
 At this point you should be able to build a blank API by pressing File-> Build Settings -> Build
 
