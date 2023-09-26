@@ -110,6 +110,8 @@ In the newest version of AR Foundation these will be in GameObject (or '+' or Ri
 
 Select XR Origin. In the inspection tab select Add Component and in the search box type “AR Plane Manager” and add it. **Make sure you select the UnityEngine.XR version!** You will notice that the plane prefab field is empty. We will fill this field by creating our own plane prefab. 
 
+Note: Because we just made a new AR Plane Manager, you may need to update any existing references to the old one (in your game code, for instance).
+
 In you scene hierarchy create an empty game object and name it “AR Plane Visualization”. Select this object. We are going to add several components to this: 
 AR Plane, AR Plane Mesh Visualizer, Mesh Renderer, Mesh Collider and Mesh Filter
 
@@ -209,11 +211,13 @@ planeManager.requestedDetectionMode = PlaneDetectionMode.Horizontal;
 
 You can continue to work in the same Unity project from HW2. Just keep in mind, you will need to submit the code in this new repo.
 
+We recommend making a copy of your hw2 scene in Unity (File->Save As) before making changes.
+
 Make sure to complete the steps in the setting up your project section (of this Readme)
 
 Delete "Miniworld_FloorPlan229_physics" gameobject from the scene (we no longer require this simulated environment), and delete the folders - "ARFoundationSim" and ":"SimEnvironments".  
 
-Delete the "ARCamera" GameObject and Follow the steps outlined in this readme. When making changes to your HW2 code, make sure to reference the section about updating HW2 code.
+Delete the "ARCamera" GameObject and Follow the steps outlined in this readme. When making changes to your HW2 code, make sure to reference the section about updating HW2 code to see
 
 The image below indicated the stuff that need to be deleted from your project.
 
@@ -354,7 +358,7 @@ In this HW, you will need to use these tracked images to add to the gameplay of 
 
 - In a pokemon game you may track images of pokemon (cards). When a player pushes a pokemon card into the view of the camera, the corresponding pokemon would be spawned into the scene over the card. E.g. - https://www.youtube.com/watch?v=3ziNTo-BCT0&ab_channel=Fyone . If required, this may also activate the fire arena (P.S. Charizard is a fire type pokemon). 
 
-- In a battle game, you may track images of a sword. When a player brings in the image of a sword into the scene, a virtual sword will spawn at the location of the image. The player can use the virtual sword to attack virtual enemies or virtual objects in the scene. 
+- In a battle game, you may track images of a sword. When a player brings in the image of a sword into the scene, a virtual sword will spawn at the location of the image. The player can use the virtual sword to attack virtual enemies or virtual objects in the scene.
 
 VERY IMPORTANT: In all these interactions, design your on-screen and tracked object interactions keeping in mind that the player will have to use one hand to hold the mobile and see the scene. So, only one hand might be free to interact using tracked objects. It important to ensure that these interactions are feasible, ergonomic and enjoyable.
 
