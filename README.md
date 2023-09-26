@@ -165,7 +165,7 @@ using UnityEngine.XR.ARSubsystems;
 
 ### Raycast Manager
 
-Any code that uses the ARRaycastManager to select objects in the scene need to be updated to use **Touch** instead of Mouse.
+Any code that uses the ARRaycastManager to select objects in the scene need to be updated to use **Touch** instead of Mouse. Also note that the ref keyword is removed from the second parameter to Raycast
 ```C++
 Vector2 touchPosition = Input.mousePosition;
 if (raycastManager.Raycast(touchPosition, ref hits, TrackableType.PlaneWithinPolygon))
