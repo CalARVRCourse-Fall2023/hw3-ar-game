@@ -31,7 +31,19 @@ Please see this guide for proper video submissions:
 https://docs.google.com/document/d/1cEpDe3CDDrIXoO1ljZLEz-Bpvs9N-DbY89AtO_-Ku5Q/edit?usp=sharing
 
 ### 2. Code
-You will also need to push your project folder to this repo. 
+You will also need to push your project folder to this repo. You can copy your Unity project into the **project** folder in this repo. This allows you to take advantage of a gitignore file to auto-exclude the Library folder. Your file structure should look like the following when submitting. Notice the Assets/Logs/Packages etc are directly in the project folder (not a sub-folder!)
+
+```
+hw3-ar-game-githubname/
+├─Instructions/
+├─project/
+|  ├─Assets
+|  ├─Library
+|  ├─Logs
+|  ├─Packages
+|  ├─... (may be more)
+├─README.md
+```
 
 **Submit a link to your repo and your video on bCourses.** Do not modify your repo after the submission deadline.
 
