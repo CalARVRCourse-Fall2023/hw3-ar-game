@@ -105,7 +105,7 @@ Now you are ready to build your first AR App. The first thing we will do is crea
 
 Create a new scene.
 
-Delete the main camera that is placed in the scene by default by unity. We will replace this by it’s AR Equivalent. This requires two objects: AR Session and AR Session Origin. 
+Delete the main camera that is placed in the scene by default by unity. We will replace this by it’s AR Equivalent. This requires two objects: AR Session and XR Origin. 
 
 In the newest version of AR Foundation these will be in GameObject (or '+' or Right Click in 'Hierarchy') -> XR -> ARSession / XR Origin
 
@@ -124,7 +124,7 @@ In your project window, in the Assets folder, create a new folder and name it Ma
 
 Select our Plane Visualization Object and drag your new material into its component list. This completes our object. To turn it into a prefab, first create a Prefabs folder under Assets. Then simply drag our Plane Visualization Object from the hierarchy into this folder. You can now delete the object from the scene hierarchy. 
 
-Lastly drag your new prefab over to the Plane Prefab section of AR Session Origin-> AR Plane Manager.
+Lastly drag your new prefab over to the Plane Prefab section of AR Plane Manager.
 
 ![image10.png](/Instructions/image10.png) 
 
@@ -238,11 +238,11 @@ Next check 'specify size' and type in the physical size of your printed image. N
 
 ![image18.PNG](/Instructions/image18.PNG)
 
-Now select the AR session Origin Game Object, and through the inspector, Add 'AR Tracked Image Manager' component. Drag your ReferenceImageLibrary from the project window to `SerializedLibrary' variable of the manager. This ensures that the AR application tracks the images that we have in the referece image library. Make sure to set the maximum number of moving components as the number of images that you want to track.
+Now select the XR Origin Game Object, and through the inspector, Add 'AR Tracked Image Manager' component. Drag your ReferenceImageLibrary from the project window to `SerializedLibrary' variable of the manager. This ensures that the AR application tracks the images that we have in the referece image library. Make sure to set the maximum number of moving components as the number of images that you want to track.
 
 ![image19.PNG](/Instructions/image19.PNG)
 
-Now we will need a script that will help us figure out which images are currently being tracked in the scene. Below is a template script that needs to be attached to the 'AR session Origin' game object.  Note that this is only a template script, and we use it to attach cubes to every uniquely tracked images. You  will certainly need to modify this to suit the needs of your game. 
+Now we will need a script that will help us figure out which images are currently being tracked in the scene. Below is a template script that needs to be attached to the XR Origin game object.  Note that this is only a template script, and we use it to attach cubes to every uniquely tracked images. You  will certainly need to modify this to suit the needs of your game. 
 
 ```C++
 using System;
@@ -266,7 +266,7 @@ public class TrackedImageInfoManager : MonoBehaviour
     private TrackingState prevTrackingState = TrackingState.None; //For newer versions of ARFoundation
     void Awake()
     {
-        //This gets a reference to the AR Tracked Image Manager attached to the 'AR session Origin' gameobject
+        //This gets a reference to the AR Tracked Image Manager attached to the 'XR Origin' gameobject
         m_TrackedImageManager = GetComponent<ARTrackedImageManager>();
     }
 
