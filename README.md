@@ -17,7 +17,7 @@ Please do not post code to a public GitHub repository, even after the class is f
 
 This HW is to be completed individually. You are welcome to discuss the various parts of the HWs with your classmates, but you must implement the HWs yourself -- you should never look at anyone else's code.
 
-## Deliverables:
+## Deliverables
 
 ### 1. Video
 You will make a 2 minute video showing off the features of your game. The video must include a verbal description of your project and it’s features. You must also include captions corresponding to the audio. This will be an important component of all your homework assignments and your final project so it is best you get this set up early. 
@@ -37,7 +37,7 @@ You will also need to push your project folder to this repo.
 
 
 
-## Before You Start:
+## Before You Start
 
 Make sure you have a compatible AR device - that is, a device that supports ARKit on iOS or ARCore on Android. 
 A list of supported Android devices can be found here:
@@ -47,20 +47,20 @@ A list of supported iOS devices is at the very bottom of this page: https://www.
 Note: For ios devices you will also need to be developing on an Apple computer.
 If you do not have a supported device combination (either a supported Android device or an iOS device + an Apple computer), you may borrow an Android phone from us. Our supply of Android phones is limited so please use your own device if possible. Plus if you use your own device you will always be able to show off your app to friends and family.  
 
-### For Android users: 
+### For Android users
 You will need to download and install Android Studio to deploy to your device.
 You will need to include Android Build Support in your Unity install
 To do this: In Unity Hub go to Installs->...->Add Modules and make sure Android Build Support is checked.
 
-### For iOS users:
+### For iOS users
 You will need to download and install XCode to deploy to your device.
 You will need to include iOS Build Support in your Unity install
 To do this: In Unity Hub go to Installs->...->Add Modules and make sure iOS Build Support is checked.
 
 
-## Setting Up Your Project:
+## Setting Up Your Project
 
-In Unity Hub create a new 3D Project.
+We recommend working in your hw2 Unity project. Make a manual backup to use as a reference point later.
 
 ### For Android users:
 * Go to Window -> Package Manager 
@@ -98,20 +98,19 @@ If you are asked to update your project settings to support the new input system
 
 At this point you should be able to build a blank API by pressing File-> Build Settings -> Build
 
-
-## Identifying Planar Surfaces in AR:
+## Identifying Planar Surfaces in AR
 
 Now you are ready to build your first AR App. The first thing we will do is create a visualizer for planar surfaces detected by your device. Later you will use these planes as locations where you can place your game board. 
 
-Create a new scene.
+Create a new scene in the Scenes folder.
 
 Delete the main camera that is placed in the scene by default by unity. We will replace this by it’s AR Equivalent. This requires two objects: AR Session and XR Origin. 
 
-In the newest version of AR Foundation these will be in GameObject (or '+' or Right Click in 'Hierarchy') -> XR -> ARSession / XR Origin
+In the newest version of AR Foundation these will be in GameObject (or '+' or Right Click in 'Hierarchy') -> XR -> AR Session. Also add an XR Origin (same menu)
 
 Select XR Origin. In the inspection tab select Add Component and in the search box type “AR Plane Manager” and add it. **Make sure you select the UnityEngine.XR version!** You will notice that the plane prefab field is empty. We will fill this field by creating our own plane prefab. 
 
-In you scene hierarchy create an empty game object and name it “Plane Visualization Object”. Select this object. We are going to add several components to this: 
+In you scene hierarchy create an empty game object and name it “AR Plane Visualization”. Select this object. We are going to add several components to this: 
 AR Plane, AR Plane Mesh Visualizer, Mesh Renderer, Mesh Collider and Mesh Filter
 
 ![image15.png](/Instructions/image15.png)
@@ -122,7 +121,7 @@ In your project window, in the Assets folder, create a new folder and name it Ma
 
 ![image7.png](/Instructions/image7.png)
 
-Select our Plane Visualization Object and drag your new material into its component list. This completes our object. To turn it into a prefab, first create a Prefabs folder under Assets. Then simply drag our Plane Visualization Object from the hierarchy into this folder. You can now delete the object from the scene hierarchy. 
+Select our AR Plane Visualization Object and drag your new material into its component list. This completes our object. To turn it into a prefab, first create a Prefabs folder under Assets. Then simply drag our AR Plane Visualization Object from the hierarchy into this folder. **You can now delete the object from the scene hierarchy. **
 
 Lastly drag your new prefab over to the Plane Prefab section of AR Plane Manager.
 
@@ -206,7 +205,7 @@ turns into
 planeManager.requestedDetectionMode = PlaneDetectionMode.Horizontal;
 ```
 
-## Using your game from HW2:
+## Using your game from HW2
 
 You can continue to work in the same Unity project from HW2. Just keep in mind, you will need to submit the code in this new repo.
 
@@ -221,7 +220,7 @@ The image below indicated the stuff that need to be deleted from your project.
 ![image16.PNG](/Instructions/image16.PNG)
 
 
-## (NEW) Adding physically tracked virtual objects into the scene:
+## Adding physically tracked virtual objects into the scene
 In this section, we will learn how to track images in a physical scene and use that for controlling virtual elements in the scene. To do this, we will leverage ARFoundation's image tracking ability. 
 
 First we will setup the image that we need AR kit to track. 
