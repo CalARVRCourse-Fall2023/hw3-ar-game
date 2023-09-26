@@ -144,6 +144,68 @@ Either redo “Build and Run”, or at this point you can just open the installe
 
 ![image20.PNG](/Instructions/image20.PNG) 
 
+## Updating HW2 Code
+
+You will need to update your code from HW2 to work with ARFoundation. Here we provide an example of how to convert various code snippets from the HW2 walkthrough. If you wrote any custom code that uses these same snippets, or developed new features that uses the same functions, you will need to adapt these snippets to your specific code.
+
+### Using directives
+
+Convert any using directives from using the ARFoundationSim code to using Unity's AR Foundation
+
+```C++
+using cs294_137.hw2;
+```
+
+turns into
+
+```C++
+using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARSubsystems;
+```
+
+### Raycast Manager
+
+Any code that uses the ARRaycastManager to select objects in the scene need to be updated to use **Touch** instead of Mouse.
+```C++
+Vector2 touchPosition = Input.mousePosition;
+if (raycastManager.Raycast(touchPosition, ref hits, TrackableType.PlaneWithinPolygon))
+```
+
+turns into
+
+```C++
+Vector2 touchPosition = Input.GetTouch(0).position;
+if (raycastManager.Raycast(touchPosition, hits, TrackableType.PlaneWithinPolygon))
+```
+
+### Plane Types
+
+If your code uses the planeType property of ARPlane, it will need to be converted to use plane classification
+
+```C++
+plane.planeType == PlaneType.HORIZONTAL
+```
+
+turns into
+
+```C++
+plane.classification == PlaneClassification.Table
+```
+
+### Detection Mode
+
+When you manually change the detection mode of the ARPlaneManager, you need to use requestedDetectionMode instead
+
+```C++
+planeManager.detectionMode = PlaneDetectionMode.Horizontal;
+```
+
+turns into
+
+```C++
+planeManager.requestedDetectionMode = PlaneDetectionMode.Horizontal;
+```
+
 ## Changes from HW2:
 
 The following sections will walk you through code snippets for developing AR applications for mobile devices. Most of the code snippets is similar to the corresponding counter parts in hw2. Wherever, a change of code is present, it is marked either with a `TO_COMMENT' or 'TO_ADD' tag. 
