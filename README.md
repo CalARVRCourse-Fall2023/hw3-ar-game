@@ -179,20 +179,6 @@ Vector2 touchPosition = Input.GetTouch(0).position;
 if (raycastManager.Raycast(touchPosition, hits, TrackableType.PlaneWithinPolygon))
 ```
 
-### Plane Types
-
-If your code uses the planeType property of ARPlane, it will need to be converted to use plane classification
-
-```C++
-plane.planeType == PlaneType.HORIZONTAL
-```
-
-turns into
-
-```C++
-plane.classification == PlaneClassification.Table
-```
-
 ### Detection Mode
 
 When you manually change the detection mode of the ARPlaneManager, you need to use requestedDetectionMode instead
@@ -206,6 +192,12 @@ turns into
 ```C++
 planeManager.requestedDetectionMode = PlaneDetectionMode.Horizontal;
 ```
+
+### KeyPress
+
+If you were using keyboard keys to perform game functions, you will now need to map those to something else. Look over potential options in Unity's [Input Class](https://docs.unity3d.com/ScriptReference/Input.html). You could also learn the more advanced [Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.7/manual/index.html) for more options.
+
+You may also be able to use the position of the AR device as an input into the scene. The transform of the Main Camera GameObject (underneath XR Origin) can be referenced to get the position/rotation of your AR device in the scene.
 
 ## Using your game from HW2
 
